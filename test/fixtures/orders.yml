@@ -1,13 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+pending_order:
+  user: customer
+  restaurant_table: table_two
+  total_price: 25.00
+  status: pending
 
-one:
-  user: one
-  restaurant_table: one
-  total_price: 9.99
-  status: 1
-
-two:
-  user: two
-  restaurant_table: two
-  total_price: 9.99
-  status: 1
+delivered_order:
+  user: customer
+  restaurant_table:
+  total_price: 45.00
+  status: delivered

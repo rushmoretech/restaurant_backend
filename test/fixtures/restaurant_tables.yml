@@ -1,11 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+table_one:
   table_number: 1
-  seats: 1
-  status: 1
+  seats: 4
+  status: available
 
-two:
-  table_number: 1
-  seats: 1
-  status: 1
+table_two:
+  table_number: 2
+  seats: 2
+  status: occupied

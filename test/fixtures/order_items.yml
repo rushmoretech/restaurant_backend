@@ -1,15 +1,12 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+soup_in_pending:
+  order: pending_order
+  menu_item: soup
+  quantity: 2
+  unit_price: 12.50
+  special_requests: No basil
 
-one:
-  order: one
-  menu_item: one
+steak_in_delivered:
+  order: delivered_order
+  menu_item: steak
   quantity: 1
-  unit_price: 9.99
-  special_requests: MyText
-
-two:
-  order: two
-  menu_item: two
-  quantity: 1
-  unit_price: 9.99
-  special_requests: MyText
+  unit_price: 45.00

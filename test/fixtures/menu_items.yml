@@ -1,15 +1,20 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+soup:
+  category: starters
+  name: Tomato Soup
+  description: Roasted tomato soup with basil
+  price: 12.50
+  is_available: true
 
-one:
-  category: one
-  name: MyString
-  description: MyText
-  price: 9.99
-  is_available: false
+steak:
+  category: mains
+  name: Ribeye Steak
+  description: 300g grilled ribeye
+  price: 45.00
+  is_available: true
 
-two:
-  category: two
-  name: MyString
-  description: MyText
-  price: 9.99
+sold_out:
+  category: mains
+  name: Seasonal Special
+  description: Not available today
+  price: 30.00
   is_available: false
