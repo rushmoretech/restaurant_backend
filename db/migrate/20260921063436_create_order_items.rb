@@ -8,7 +8,6 @@ class CreateOrderItems < ActiveRecord::Migration[8.1]
       t.text :special_requests
 
       t.timestamps
-
     end
   end
 end

@@ -9,4 +9,3 @@ class RestaurantTable < ApplicationRecord
   validates :seats, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validates :status, presence: true
 end
-

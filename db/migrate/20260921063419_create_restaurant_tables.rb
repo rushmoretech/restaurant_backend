@@ -6,7 +6,6 @@ class CreateRestaurantTables < ActiveRecord::Migration[8.1]
       t.integer :status, default: 0, null: false
 
       t.timestamps
-
     end
     add_index :restaurant_tables, :table_number, unique: true
   end

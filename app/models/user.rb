@@ -12,4 +12,3 @@ class User < ApplicationRecord
                     format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :role, presence: true
 end
-

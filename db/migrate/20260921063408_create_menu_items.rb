@@ -8,7 +8,6 @@ class CreateMenuItems < ActiveRecord::Migration[8.1]
       t.boolean :is_available, default: true, null: false
 
       t.timestamps
-
     end
   end
 end
