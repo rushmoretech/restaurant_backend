@@ -27,3 +27,10 @@ admin:
   email: dan@example.com
   password_digest: <%= digest %>
   role: admin
+
+other_customer:
+  first_name: Eva
+  last_name: Stan
+  email: eva@example.com
+  password_digest: <%= digest %>
+  role: customer

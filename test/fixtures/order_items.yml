@@ -10,3 +10,15 @@ steak_in_delivered:
   menu_item: steak
   quantity: 1
   unit_price: 45.00
+
+steak_in_preparing:
+  order: preparing_order
+  menu_item: steak
+  quantity: 1
+  unit_price: 45.00
+
+soup_in_ready:
+  order: ready_order
+  menu_item: soup
+  quantity: 1
+  unit_price: 12.50

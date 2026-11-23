@@ -9,3 +9,15 @@ delivered_order:
   restaurant_table:
   total_price: 45.00
   status: delivered
+
+preparing_order:
+  user: other_customer
+  restaurant_table: table_one
+  total_price: 45.00
+  status: preparing
+
+ready_order:
+  user: other_customer
+  restaurant_table:
+  total_price: 12.50
+  status: ready
