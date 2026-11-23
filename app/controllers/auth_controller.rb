@@ -12,7 +12,7 @@ class AuthController < ApplicationController
     if user.save
       render json: auth_payload(user), status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: :unprocessable_content
+      render_errors(user)
     end
   end
 

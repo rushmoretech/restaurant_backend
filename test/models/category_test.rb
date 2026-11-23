@@ -43,4 +43,13 @@ class CategoryTest < ActiveSupport::TestCase
       category.destroy
     end
   end
+
+  test "cannot be destroyed while a menu item has been ordered" do
+    category = categories(:starters)
+
+    assert_no_difference [ "Category.count", "MenuItem.count" ] do
+      assert_not category.destroy
+    end
+    assert_includes category.errors[:base], "Cannot delete a category that has menu items used in orders"
+  end
 end

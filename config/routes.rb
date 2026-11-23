@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   post "signup", to: "auth#signup"
   post "login", to: "auth#login"
   get "me", to: "auth#me"
+
+  resources :categories, except: %i[new edit]
+  resources :menu_items, except: %i[new edit]
 end
