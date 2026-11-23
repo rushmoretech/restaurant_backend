@@ -61,8 +61,10 @@ class RestaurantTableTest < ActiveSupport::TestCase
     assert_not_includes RestaurantTable.available, restaurant_tables(:table_two)
   end
 
-  test "rejects an unknown status" do
-    assert_raises(ArgumentError) { build_table(status: "broken") }
+  test "an unknown status is a validation error, not an exception" do
+    table = build_table(status: "broken")
+    assert_not table.valid?
+    assert_includes table.errors[:status], "is not included in the list"
   end
 
   test "has many orders" do

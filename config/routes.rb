@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   resources :categories, except: %i[new edit]
   resources :menu_items, except: %i[new edit]
+  resources :restaurant_tables, except: %i[new edit]
 end

@@ -1,5 +1,5 @@
 class RestaurantTable < ApplicationRecord
-  enum :status, { available: 0, occupied: 1, reserved: 2 }
+  enum :status, { available: 0, occupied: 1, reserved: 2 }, validate: true
 
   has_many :orders, dependent: :nullify
 
