@@ -10,6 +10,9 @@ module ActiveSupport
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
 
-    # Add more helper methods to be used by all tests here...
+    # Authorization header for requests made as the given user.
+    def auth_headers(user)
+      { "Authorization" => "Bearer #{JsonWebToken.encode(sub: user.id.to_s)}" }
+    end
   end
 end

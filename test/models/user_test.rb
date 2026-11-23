@@ -54,6 +54,21 @@ class UserTest < ActiveSupport::TestCase
     assert_includes user.errors[:email], "has already been taken"
   end
 
+  test "email is normalized to lowercase without surrounding spaces" do
+    assert_equal "elena@example.com", build_user(email: "  Elena@Example.COM ").email
+  end
+
+  test "password must be at least 8 characters" do
+    user = build_user(password: "short")
+    assert_not user.valid?
+    assert_includes user.errors[:password], "is too short (minimum is 8 characters)"
+  end
+
+  test "existing users can be updated without resetting the password" do
+    user = users(:customer)
+    assert user.update(first_name: "Anca")
+  end
+
   test "requires a password on create" do
     user = build_user(password: nil)
     assert_not user.valid?
